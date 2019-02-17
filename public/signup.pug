@@ -1,0 +1,21 @@
+doctype html
+html
+    head
+        title= "Sign Up"
+        link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" cross-origin="anonymous")
+    body.container
+        include includes/header.pug
+        div.container.row
+            div.jumbotron.col-sm-4.pull-center
+                form(action="/signup" method="POST")
+                    div
+                        label Username:
+                        input(type="text" name="username")
+                    div
+                        label Email:
+                        input(type="text" name="email")
+                    div
+                        label Password:
+                        input(type="password" name="password")
+                    div
+                        input.btn.btn-primary(type="submit" value="Login")

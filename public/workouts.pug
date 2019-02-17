@@ -1,0 +1,17 @@
+doctype html
+html
+    head
+        title= "Login"
+        link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" cross-origin="anonymous")
+    body.container
+        include includes/header.pug
+        div.container.row
+            h1 Hi #{username}, Welcome to your workouts!
+            ul
+                each val in data
+                    li= 'ID ' + val.id 
+                    li= val.type
+                    li= val.time_length + ' Hour'
+                    li= val.date
+                    li= val.notes
+                    hr

@@ -1,0 +1,24 @@
+doctype html
+html
+    head
+        title= "Create Workout"
+        link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" cross-origin="anonymous")
+    body.container
+        include includes/header.pug
+        div.container.row
+            div.jumbotron.col-sm-4.pull-center
+                form(action="/create" method="POST")
+                    div
+                        label Date:
+                        input(type="text" name="date" placeholder="2019-02-14")
+                    div
+                        label Type:
+                        input(type="text" name="type")
+                    div
+                        label Time Length:
+                        input(type="text" name="time_length")
+                    div
+                        label Notes:
+                        textarea(rows="4" name="notes")
+                    div
+                        input.btn.btn-primary(type="submit" value="Workout")
